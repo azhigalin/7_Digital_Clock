@@ -1,12 +1,12 @@
 window.addEventListener("load", calcDate);
 
 function calcDate() {
-  let date = new Date();
-  let dayNumber = date.getDay();
-  let hour = date.getHours();
-  let minute = date.getMinutes();
-  let ampm = hour >= 12 ? "PM" : "AM";
-  let dayNames = ["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"];
+  let date = new Date(),
+    dayNumber = date.getDay(),
+    hour = date.getHours(),
+    minute = date.getMinutes(),
+    ampm = hour >= 12 ? "PM" : "AM",
+    dayNames = ["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"];
 
   hour = hour % 12;
   hour = hour ? hour : "12";
@@ -19,4 +19,4 @@ function calcDate() {
   document.querySelector("#ampm").textContent = ampm;
 }
 
-setInterval(calcDate, 500);
+setInterval(calcDate, 100);
